@@ -40,6 +40,7 @@ Protected API Access:
 4.	Lambda processes business logic and returns response
 5.	API Gateway sends response back to client
 
+<img width="1522" height="1020" alt="image" src="https://github.com/user-attachments/assets/25712091-e8f0-4ac3-98a3-418cb2fbfe86" />
 
 
 
