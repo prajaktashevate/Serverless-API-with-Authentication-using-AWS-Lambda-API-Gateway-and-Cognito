@@ -1,4 +1,3 @@
-# 🔵 Setup Guide – Serverless API with Cognito Authentication
 
 # **1. Create a Cognito User Pool**
 
@@ -21,7 +20,7 @@
 1. Go to **AWS Management Console → Lambda → Create function**.
 2. Select **Author from scratch**.
 
-   * Function name: `MyApiFunction`.
+   * Function name: `Lambdaproject`.
    * Runtime: Python/Node.js/Java (your choice).
 3. Add your code. Example (Python):
 
@@ -29,7 +28,7 @@
 def lambda_handler(event, context):
     return {
         "statusCode": 200,
-        "body": "Hello, your request was successful!"
+        'body': json.dumps('Hello from Lambda!')
     }
 ```
 
@@ -40,11 +39,11 @@ def lambda_handler(event, context):
 ## **3. Create an API Gateway**
 
 1. Go to **Amazon API Gateway → Create API → REST API** (or HTTP API for simpler setup).
-2. Create a **resource** (e.g., `/hello`).
+2. Create a **resource** (e.g., `/`).
 3. Create a **method** → `GET`.
 4. Choose **Lambda Function** as integration → Select your Lambda.
-5. Deploy the API → Create a stage (e.g., `dev`).
-6. Copy the **Invoke URL** (e.g., `https://abc123.execute-api.ap-south-1.amazonaws.com/dev/hello`).
+5. Deploy the API → Create a stage (e.g., `GET`).
+6. Copy the **Invoke URL** (e.g., `https://8y457h2s7c.execute-api.ap-south-1.amazonaws.com`).
 
 ---
 
@@ -55,7 +54,7 @@ def lambda_handler(event, context):
 2. Select:
 
    * Type: **Cognito**.
-   * Name: `CognitoAuthorizer`.
+   * Name: `ClientA`.
    * Choose your **Cognito User Pool**.
    * Region: your pool’s region.
 
