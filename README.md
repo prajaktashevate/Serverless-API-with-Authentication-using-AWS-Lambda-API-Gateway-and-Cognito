@@ -7,9 +7,13 @@ Build a secure, scalable, serverless API that provides user authentication and a
 =============
 
 This project implements a complete serverless authentication system using three core AWS services:
+
 •	AWS Lambda: Executes your API business logic without server management
+
 •	API Gateway: Manages HTTP requests, routing, and API security
+
 •	Amazon Cognito: Handles user registration, authentication, and authorization
+
 The system allows users to sign up, sign in, and access protected API endpoints using JWT tokens, all while running on AWS's managed infrastructure with automatic scaling and high availability.
 
 📌 Architecture Flow :-
